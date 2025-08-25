@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미국 실내 골프 시장 인포그래픽</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-white">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12 md:mb-16">
+            <h1 class="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#33FF57] to-[#3357FF] mb-4">기술이 재편하는 골프의 미래: 미국 시장 분석</h1>
+            <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">전통적인 필드를 넘어 디지털 스크린으로 확장되는 미국 골프 시장의 현황과 미래를 심층 분석한 데이터 시각화 보고서입니다.</p>
+        </header>
+
+        <main class="space-y-12 md:space-y-16">
+
+            <section class="bg-slate-800 rounded-2xl shadow-2xl p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center mb-8 text-[#FF5733]">미국 골프 시장의 새로운 풍경</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-slate-900 p-6 rounded-lg">
+                        <p class="text-6xl font-black text-[#A133FF]">4,720만</p>
+                        <p class="mt-2 text-slate-400">총 골프 참여 인구 (2024년)</p>
+                    </div>
+                    <div class="bg-slate-900 p-6 rounded-lg">
+                        <p class="text-6xl font-black text-[#33FF57]">+38%</p>
+                        <p class="mt-2 text-slate-400">2019년 팬데믹 이후 성장률</p>
+                    </div>
+                    <div class="bg-slate-900 p-6 rounded-lg">
+                        <p class="text-6xl font-black text-[#FF33A1]">1위</p>
+                        <p class="mt-2 text-slate-400">오프코스 참여자 수, 온코스 추월</p>
+                    </div>
+                </div>
+                <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-center">온코스 vs. 오프코스 참여자 비교</h3>
+                        <p class="text-slate-300 mb-4 text-center md:text-left">2024년, 오프코스 골프 참여자 수가 사상 처음으로 전통적인 온코스 골퍼 수를 넘어섰습니다. 이는 골프가 필드를 넘어 대중적인 엔터테인먼트로 확장되었음을 의미합니다.</p>
+                        <div class="chart-container">
+                            <canvas id="onOffCourseChart"></canvas>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-center">인구통계학적 변화: 새로운 골퍼</h3>
+                        <p class="text-slate-300 mb-4 text-center md:text-left">미국 실내 골프 시장의 성장은 젊고 다양한 인구층이 주도하고 있습니다. 18-34세의 젊은 성인과 여성이 전체 실내 골프 팬의 62%를 차지하며 시장을 견인합니다.</p>
+                        <div class="chart-container">
+                            <canvas id="demographicsChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-slate-800 rounded-2xl shadow-2xl p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center mb-8 text-[#33FF57]">실내 골프 시장의 폭발적인 성장</h2>
+                <div class="grid grid-cols-1 gap-8 items-center">
+                    <div class="md:col-span-1">
+                        <h3 class="text-2xl font-bold mb-4 text-center">미국 실내 골프 시장 규모 예측 (단위: 억 달러)</h3>
+                        <p class="text-slate-300 mb-6 max-w-3xl mx-auto text-center">여러 시장 조사 기관의 데이터를 종합한 결과, 미국 실내 골프 시장은 연평균 최대 **15.6%**의 성장률을 보이며 **2033년까지 52억 달러** 규모를 넘어설 것으로 예측됩니다. 이는 기술 발전과 새로운 비즈니스 모델의 확산에 힘입은 결과입니다.</p>
+                        <div class="chart-container h-96 max-h-[450px] max-w-4xl">
+                            <canvas id="marketGrowthChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                 <div class="mt-12">
+                    <h3 class="text-2xl font-bold text-center mb-6">성장을 이끄는 핵심 동력</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                        <div class="bg-slate-900 p-6 rounded-lg shadow-lg">
+                            <div class="text-4xl mb-3 text-[#A133FF]">💡</div>
+                            <h4 class="font-bold text-lg mb-2 text-[#A133FF]">기술 혁신</h4>
+                            <p class="text-sm text-slate-400">AI 스윙 분석, VR/AR, 클라우드 기반 멀티플레이 등 몰입감 있는 경험이 시장을 견인합니다.</p>
+                        </div>
+                        <div class="bg-slate-900 p-6 rounded-lg shadow-lg">
+                            <div class="text-4xl mb-3 text-[#A133FF]">🚪</div>
+                            <h4 class="font-bold text-lg mb-2 text-[#A133FF]">뛰어난 접근성</h4>
+                            <p class="text-sm text-slate-400">날씨와 장소에 구애받지 않고 즐길 수 있으며, 도심에서도 쉽게 접근 가능합니다.</p>
+                        </div>
+                        <div class="bg-slate-900 p-6 rounded-lg shadow-lg">
+                            <div class="text-4xl mb-3 text-[#A133FF]">💼</div>
+                            <h4 class="font-bold text-lg mb-2 text-[#A133FF]">비즈니스 모델의 진화</h4>
+                            <p class="text-sm text-slate-400">상업 시설의 확장과 구독/종량제 모델이 고급 기술의 대중화를 이끌고 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-slate-800 rounded-2xl shadow-2xl p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center mb-8 text-[#FF33A1]">시장을 선도하는 Top 3 브랜드 비교</h2>
+                <p class="text-slate-300 mb-8 max-w-3xl mx-auto text-center">미국 시장을 이끄는 세 브랜드는 각자의 기술과 가치 제안을 통해 시장을 세분화하고 있습니다. 이들은 서로 다른 사용자층을 명확하게 공략합니다.</p>
+                <div class="overflow-x-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 min-w-[800px] md:min-w-full">
+                        <div class="font-bold text-lg p-4 bg-slate-700 rounded-l-lg hidden md:block">특징</div>
+                        <div class="bg-slate-900 p-4 rounded-lg text-center font-bold text-lg text-[#FF5733]">GOLFZON</div>
+                        <div class="bg-slate-900 p-4 rounded-lg text-center font-bold text-lg text-[#3357FF]">Trackman</div>
+                        <div class="bg-slate-900 p-4 rounded-lg text-center font-bold text-lg text-[#A133FF]">Foresight Sports</div>
+
+                        <div class="font-bold p-4 bg-slate-700 md:rounded-l-lg">핵심 기술</div>
+                        <div class="p-4 bg-slate-700">고속 카메라 & 센서</div>
+                        <div class="p-4 bg-slate-700">도플러 레이더</div>
+                        <div class="p-4 bg-slate-700 md:rounded-r-lg">광전 카메라</div>
+
+                        <div class="font-bold p-4 bg-slate-700 md:rounded-l-lg">가치 제안</div>
+                        <div class="p-4 bg-slate-700">몰입형 엔터테인먼트</div>
+                        <div class="p-4 bg-slate-700">전문가급 데이터 분석</div>
+                        <div class="p-4 bg-slate-700 md:rounded-r-lg">정확성 & 사용 편의성</div>
+
+                        <div class="font-bold p-4 bg-slate-700 md:rounded-l-lg">차별점</div>
+                        <div class="p-4 bg-slate-700">움직이는 스윙 플레이트</div>
+                        <div class="p-4 bg-slate-700">볼 비행 전체 궤적 추적</div>
+                        <div class="p-4 bg-slate-700 md:rounded-r-lg">임팩트 순간 직접 측정</div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="bg-slate-800 rounded-2xl shadow-2xl p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center mb-8 text-[#3357FF]">미국에서 세계로: 글로벌 트렌드 전파</h2>
+                <p class="text-slate-300 mb-8 max-w-3xl mx-auto text-center">미국 시장의 성공은 단순한 내수 성장을 넘어, 새로운 비즈니스 모델과 기술을 전 세계로 확산시키는 기폭제 역할을 합니다. 이는 글로벌 골프 시장의 새로운 표준을 정립하고 있습니다.</p>
+                <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+                    <div class="text-center p-6 bg-slate-900 rounded-lg shadow-lg">
+                        <p class="text-2xl font-bold text-[#FF5733]">미국 시장</p>
+                        <p class="text-sm text-slate-400">비즈니스 모델 검증</p>
+                    </div>
+                    <div class="text-5xl font-bold text-[#33FF57] transform rotate-90 md:rotate-0">→</div>
+                    <div class="text-center p-6 bg-slate-900 rounded-lg shadow-lg">
+                        <p class="text-2xl font-bold text-[#FF33A1]">글로벌 확장</p>
+                        <p class="text-sm text-slate-400">Topgolf, GOLFZON 등</p>
+                    </div>
+                     <div class="text-5xl font-bold text-[#33FF57] transform rotate-90 md:rotate-0">→</div>
+                    <div class="text-center p-6 bg-slate-900 rounded-lg shadow-lg">
+                        <p class="text-2xl font-bold text-[#A133FF]">새로운 표준 정립</p>
+                        <p class="text-sm text-slate-400">골프-엔터테인먼트, e-스포츠</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 md:mt-16 pt-8 border-t border-slate-700">
+            <p class="text-slate-400 text-sm">본 인포그래픽은 제공된 '미국 실내 골프 시장 현황 및 미래 전망' 보고서를 기반으로 제작되었습니다.</p>
+            <p class="text-slate-500 text-xs mt-2">데이터 출처: Business Research Insights, Grand View Research, Fortune Business Insights 등.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const wrapLabel = (label, maxLength = 16) => {
+                if (typeof label !== 'string' || label.length <= maxLength) {
+                    return label;
+                }
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                for (const word of words) {
+                    if ((currentLine + word).length > maxLength) {
+                        lines.push(currentLine.trim());
+                        currentLine = '';
+                    }
+                    currentLine += word + ' ';
+                }
+                lines.push(currentLine.trim());
+                return lines.filter(line => line.length > 0);
+            };
+
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                }
+                return label;
+            };
+
+            const sharedChartOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#cbd5e1',
+                            font: {
+                                size: 14
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        ticks: { color: '#94a3b8' },
+                        grid: { color: '#334155' }
+                    },
+                    x: {
+                        ticks: { color: '#94a3b8' },
+                        grid: { color: '#334155' }
+                    }
+                }
+            };
+
+            const onOffCourseCtx = document.getElementById('onOffCourseChart').getContext('2d');
+            new Chart(onOffCourseCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: [wrapLabel('온코스 참여자 (2,800만)'), wrapLabel('오프코스 참여자 (2,790만)')],
+                    datasets: [{
+                        label: '참여자 수',
+                        data: [2800, 2790],
+                        backgroundColor: ['#3357FF', '#FF33A1'],
+                        borderColor: '#1e293b',
+                        borderWidth: 4
+                    }]
+                },
+                options: {
+                    ...sharedChartOptions,
+                    scales: { y: { display: false }, x: { display: false } }
+                }
+            });
+
+            const demographicsCtx = document.getElementById('demographicsChart').getContext('2d');
+            new Chart(demographicsCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: [wrapLabel('젊은층/여성 (62%)'), wrapLabel('기타 (38%)')],
+                    datasets: [{
+                        label: '인구 구성',
+                        data: [62, 38],
+                        backgroundColor: ['#33FF57', '#A133FF'],
+                        borderColor: '#1e293b',
+                        borderWidth: 4
+                    }]
+                },
+                options: {
+                    ...sharedChartOptions,
+                    scales: { y: { display: false }, x: { display: false } }
+                }
+            });
+
+            const marketGrowthCtx = document.getElementById('marketGrowthChart').getContext('2d');
+            new Chart(marketGrowthCtx, {
+                type: 'line',
+                data: {
+                    labels: ['2024', '2025', '2027', '2030', '2033'],
+                    datasets: [{
+                        label: '시장 규모 (억 달러)',
+                        data: [17.4, 19.2, 25.1, 36.5, 52.0],
+                        fill: true,
+                        backgroundColor: 'rgba(51, 255, 87, 0.2)',
+                        borderColor: '#33FF57',
+                        tension: 0.4,
+                        pointBackgroundColor: '#33FF57',
+                        pointRadius: 5
+                    }]
+                },
+                options: {
+                    ...sharedChartOptions,
+                    scales: {
+                        y: {
+                            ...sharedChartOptions.scales.y,
+                            beginAtZero: true,
+                            title: { display: true, text: '시장 규모 (억 달러)', color: '#cbd5e1' }
+                        },
+                        x: {
+                            ...sharedChartOptions.scales.x,
+                            title: { display: true, text: '연도', color: '#cbd5e1' }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
