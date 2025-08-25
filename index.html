@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 인포그래픽 포트폴리오</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #F0F4F8;
+            color: #073B4C;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 sm:p-8 max-w-4xl">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-2">나의 인포그래픽 포트폴리오</h1>
+            <p class="text-lg text-gray-600">제작한 인포그래픽들을 한눈에 확인하세요.</p>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <a href="." class="card block hover:no-underline">
+                <h2 class="text-2xl font-bold mb-2">3주 다이어트 플랜</h2>
+                <p class="text-gray-600">184cm/95kg 남성을 위한 맞춤형 다이어트 계획</p>
+            </a>
+            <a href="infographic-2.html" class="card block hover:no-underline">
+                <h2 class="text-2xl font-bold mb-2">두 번째 인포그래픽 제목</h2>
+                <p class="text-gray-600">여기에 두 번째 인포그래픽에 대한 설명을 작성하세요.</p>
+            </a>
+            <!-- 여기에 더 많은 인포그래픽 링크를 추가할 수 있습니다. -->
+        </main>
+    </div>
+</body>
+</html>
