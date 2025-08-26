@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U.S. Golf Simulator Market Analysis Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.32.0.min.js" charset="utf-8"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .stat-card {
+            background-color: #003F5C;
+            color: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #FFA600;
+        }
+        .stat-label {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-[#003F5C] mb-2">U.S. Golf Simulator Market Status and Outlook</h1>
+            <p class="text-lg text-gray-600">Comprehensive Market Analysis and Data-Driven Insights</p>
+        </header>
+
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div class="stat-card text-center">
+                <div class="stat-value">$1 Billion</div>
+                <div class="stat-label">2024 Market Value</div>
+            </div>
+            <div class="stat-card text-center">
+                <div class="stat-value">6.2 Million</div>
+                <div class="stat-label">Annual Users</div>
+            </div>
+            <div class="stat-card text-center">
+                <div class="stat-value">+73%</div>
+                <div class="stat-label">User Increase vs. Pre-Pandemic</div>
+            </div>
+        </section>
+
+        <main class="space-y-12">
+
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-[#003F5C] mb-4">Market Size and Growth Trajectory</h2>
+                <p class="text-gray-600 mb-6">The U.S. golf simulator market is experiencing robust growth with a compound annual growth rate (CAGR) of 8.4-8.8%, projected to reach a market value of $1.87 billion by 2033. This growth is driven by urbanization, a preference for weather-independent recreation, and technological advancements.</p>
+                <div class="chart-container h-80 md:h-96 max-h-[450px]">
+                    <canvas id="marketGrowthChart"></canvas>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-2xl font-bold text-[#003F5C] mb-4">Inflow of New Users</h2>
+                    <p class="text-gray-600 mb-6">A significant 51% of golf simulator users are non-golfers, demonstrating the industry's success in attracting new customers beyond the traditional golf market. This has greatly contributed to the popularization and expansion of golf.</p>
+                    <div class="chart-container h-72 md:h-80 max-h-[350px]">
+                        <canvas id="userDemographicsChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-2xl font-bold text-[#003F5C] mb-4">Regional Market Penetration</h2>
+                    <p class="text-gray-600 mb-6">Market penetration is closely linked to climate. Regions with harsh winters, such as the Midwest and North, show higher penetration rates, which highlights the advantage of indoor golf's year-round accessibility.</p>
+                    <div class="chart-container h-72 md:h-80 max-h-[350px]">
+                        <canvas id="regionalPenetrationChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-[#003F5C] mb-4">Major Brand Market Share</h2>
+                <p class="text-gray-600 mb-6">The market is dominated by several technology-leading companies. TrackMan leads with a strong presence in the commercial and professional markets, followed by Foresight Sports and Golfzon. Each brand has established a unique position based on technological differentiation and target market.</p>
+                <div class="chart-container h-80 md:h-96 max-h-[450px]">
+                    <canvas id="marketShareChart"></canvas>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-[#003F5C] mb-4">Commercial Facility Revenue Model Analysis</h2>
+                <p class="text-gray-600 mb-6">Commercial golf simulator facilities demonstrate high profitability through multiple revenue streams. While hourly bay rentals are the main source of income, memberships, lessons, and food & beverage sales are crucial for significantly increasing overall revenue. F&B in particular accounts for 73% of additional revenue outside of simulator fees.</p>
+                <div class="chart-container h-80 md:h-96 max-h-[450px]">
+                    <canvas id="revenueScenarioChart"></canvas>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="text-center mt-12 pt-8 border-t border-gray-300">
+            <p class="text-gray-500">This infographic was created based on the 'Golf Simulator Usage in the United States' report.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const FONT_COLOR = '#003F5C';
+            const GRID_COLOR = '#e0e6ed';
+            const PALETTE = {
+                blue_dark: '#003F5C',
+                blue_medium: '#366E8A',
+                blue_light: '#7A9EAF',
+                white: '#FFFFFF',
+                orange_accent: '#FFA600'
+            };
+
+            const CHART_COLORS = ['#366E8A', '#FFA600', '#7A9EAF', '#003F5C', '#a05195', '#d45087', '#f95d6a', '#ff7c43', '#ffa600'];
+
+            const tooltipTitleCallback = function(tooltipItems) {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                } else {
+                    return label;
+                }
+            };
+            
+            const wrapLabel = (label) => {
+                const maxLength = 16;
+                if (label.length <= maxLength) return label;
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                for (const word of words) {
+                    if ((currentLine + word).length > maxLength) {
+                        lines.push(currentLine.trim());
+                        currentLine = '';
+                    }
+                    currentLine += word + ' ';
+                }
+                lines.push(currentLine.trim());
+                return lines.filter(line => line);
+            };
+
+            Chart.defaults.font.family = "'Noto Sans KR', sans-serif";
+            Chart.defaults.color = FONT_COLOR;
+            Chart.defaults.plugins.legend.position = 'bottom';
+
+            new Chart(document.getElementById('marketGrowthChart'), {
+                type: 'line',
+                data: {
+                    labels: ['2024', '2025', '2030', '2033'],
+                    datasets: [{
+                        label: 'Market Value ($M)',
+                        data: [890, 970, 1100, 1870],
+                        borderColor: PALETTE.orange_accent,
+                        backgroundColor: 'rgba(255, 166, 0, 0.1)',
+                        fill: true,
+                        tension: 0.1
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            ticks: { color: FONT_COLOR },
+                            grid: { color: GRID_COLOR }
+                        },
+                        x: {
+                            ticks: { color: FONT_COLOR },
+                            grid: { color: GRID_COLOR }
+                        }
+                    },
+                    plugins: {
+                        tooltip: { callbacks: { title: tooltipTitleCallback } }
+                    }
+                }
+            });
+
+            new Chart(document.getElementById('userDemographicsChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['Non-Golfers', 'Golfers'],
+                    datasets: [{
+                        data: [51, 49],
+                        backgroundColor: [PALETTE.orange_accent, PALETTE.blue_medium],
+                        borderColor: PALETTE.white,
+                        borderWidth: 4
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    plugins: {
+                        tooltip: { callbacks: { title: tooltipTitleCallback } },
+                        legend: {
+                            labels: {
+                                boxWidth: 20
+                            }
+                        }
+                    }
+                }
+            });
+
+            new Chart(document.getElementById('regionalPenetrationChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['South', 'National Average', 'North', 'Midwest'],
+                    datasets: [{
+                        label: 'Penetration (%)',
+                        data: [4.0, 6.5, 7.9, 8.4],
+                        backgroundColor: [CHART_COLORS[2], CHART_COLORS[1], CHART_COLORS[3], CHART_COLORS[0]],
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            ticks: { color: FONT_COLOR },
+                            grid: { color: GRID_COLOR }
+                        },
+                        y: {
+                            ticks: { color: FONT_COLOR },
+                            grid: { display: false }
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { callbacks: { title: tooltipTitleCallback } }
+                    }
+                }
+            });
+
+            new Chart(document.getElementById('marketShareChart'), {
+                type: 'pie',
+                data: {
+                    labels: ['TrackMan', 'Foresight Spt', 'Golfzon', 'Full Swing', 'HD Golf', 'Uneekor', 'SkyTrak', 'AboutGolf', 'Others'].map(wrapLabel),
+                    datasets: [{
+                        data: [20, 18, 15, 12, 10, 8, 7, 5, 5],
+                        backgroundColor: CHART_COLORS,
+                        borderColor: PALETTE.white,
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    plugins: {
+                        tooltip: { callbacks: { title: tooltipTitleCallback } },
+                        legend: {
+                            labels: {
+                                boxWidth: 15,
+                                padding: 15
+                            }
+                        }
+                    }
+                }
+            });
+            
+            new Chart(document.getElementById('revenueScenarioChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['Low', 'Average', 'High'],
+                    datasets: [
+                        {
+                            label: 'Simulator Revenue',
+                            data: [100, 125, 175],
+                            backgroundColor: PALETTE.blue_medium,
+                        },
+                        {
+                            label: 'Food & Beverage',
+                            data: [30, 50, 75],
+                            backgroundColor: PALETTE.orange_accent,
+                        },
+                        {
+                            label: 'Lessons',
+                            data: [20, 25, 45],
+                            backgroundColor: PALETTE.blue_light,
+                        },
+                        {
+                            label: 'Memberships',
+                            data: [15, 35, 50],
+                            backgroundColor: PALETTE.blue_dark,
+                        }
+                    ]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: { 
+                            stacked: true,
+                            ticks: { color: FONT_COLOR },
+                            grid: { display: false }
+                        },
+                        y: { 
+                            stacked: true,
+                            ticks: { color: FONT_COLOR },
+                            grid: { color: GRID_COLOR },
+                            title: {
+                                display: true,
+                                text: 'Annual Revenue ($K)',
+                                color: FONT_COLOR
+                            }
+                        }
+                    },
+                    plugins: {
+                        tooltip: { 
+                            callbacks: { title: tooltipTitleCallback },
+                            mode: 'index',
+                            intersect: false
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
